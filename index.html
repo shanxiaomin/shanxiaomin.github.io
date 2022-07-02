@@ -1,173 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>待开发</title>
-<style>
-* {
-  box-sizing: border-box;
+ <meta charset="utf-8">
+<style> 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
 }
- 
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #f1f1f1;
+
+.flex-container > * {
+    padding: 10px;
+    flex: 1 100%;
 }
- 
-/* 头部标题 */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white;
+
+.main {
+    text-align: left;
+    background: cornflowerblue;
 }
- 
-.header h1 {
-  font-size: 50px;
+
+.header {background: coral;}
+.footer {background: lightgreen;}
+.aside1 {background: moccasin;}
+.aside2 {background: violet;}
+
+@media all and (min-width: 600px) {
+    .aside { flex: 1 auto; }
 }
- 
-/* 导航条 */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
- 
-/* 导航条链接 */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
- 
-/* 链接颜色修改 */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
- 
-/* 创建两列 */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
- 
-/* 右侧栏 */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
- 
-/* 图像部分 */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
- 
-/* 文章卡片效果 */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
- 
-/* 列后面清除浮动 */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
- 
-/* 底部 */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
- 
- .cainiao{
-	 color: #55ffff;
-	 text-decoration: none;
- }
- .cainiao:hover{
-	 color: rgba(255, 85, 0, 0.5);
- }
- 
-/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
- 
-/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
+
+@media all and (min-width: 800px) {
+    .main    { flex: 3 0px; }
+    .aside1 { order: 1; } 
+    .main    { order: 2; }
+    .aside2 { order: 3; }
+    .footer  { order: 4; }
 }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>待开发</h1>
-  <p>响应式布局，来源于<a class="cainiao" href="https://www.runoob.com/try/try.php?filename=trycss_website_layout_blog">菜鸟教程</a></p>
-</div>
-
-<div class="topnav">
-  <a href="#">待开发</a>
-  <a href="#">待开发</a>
-  <a href="#">待开发</a>
-  <a href="#" style="float:right">待开发</a>
-</div>
-
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>文章标题</h2>
-      <h5>2019 年 4 月 17日</h5>
-      <div class="fakeimg" style="height:200px;">图片</div>
-      <p>一些文本...</p>
-      <p>待开发。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。</p>
-    </div>
-    <div class="card">
-      <h2>文章标题</h2>
-      <h5>2019 年 4 月 17日</h5>
-      <div class="fakeimg" style="height:200px;">图片</div>
-      <p>一些文本...</p>
-      <p>待开发。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>关于我</h2>
-      <div class="fakeimg" style="height:100px;">图片</div>
-      <p>关于我的一些信息..</p>
-    </div>
-    <div class="card">
-      <h3>热门文章</h3>
-      <div class="fakeimg"><p>图片</p></div>
-      <div class="fakeimg"><p>图片</p></div>
-      <div class="fakeimg"><p>图片</p></div>
-    </div>
-    <div class="card">
-      <h3>关注我</h3>
-      <p>一些文本...</p>
-    </div>
-  </div>
-</div>
-
-<div class="footer">
-  <h2>底部区域</h2>
+<div class="flex-container">
+  <header class="header">头部</header>
+  <article class="main">
+    <p>测试。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。</p>
+  </article>
+  <aside class="aside aside1">边栏 1</aside>
+  <aside class="aside aside2">边栏 2</aside>
+  <footer class="footer">底部</footer>
 </div>
 
 </body>
