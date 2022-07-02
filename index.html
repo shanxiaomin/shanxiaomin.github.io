@@ -1,48 +1,174 @@
-<!DOCTYPE html PUBLIC>
+<!DOCTYPE html>
 <html>
 <head>
-<meta>
-	<meta charset="UTF-8">
-	<title>Cmin</title>
-	<style type="text/css">
-	body {
-		background-color: black;
-            	padding: 30px; 
-		font-szie:18px;
-	       }
-		h1,h3,p,a{
-			color:#fff;
-			texe-align:center;
-		}
-	</style>
+<meta charset="utf-8">
+<title>待开发</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+ 
+/* 头部标题 */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+ 
+.header h1 {
+  font-size: 50px;
+}
+ 
+/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+ 
+/* 导航条链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ 
+/* 链接颜色修改 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ 
+/* 创建两列 */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+ 
+/* 右侧栏 */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+ 
+/* 图像部分 */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+ 
+/* 文章卡片效果 */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+ 
+/* 列后面清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ 
+/* 底部 */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+ 
+ .cainiao{
+	 color: #55ffff;
+	 text-decoration: none;
+ }
+ .cainiao:hover{
+	 color: rgba(255, 85, 0, 0.5);
+ }
+ 
+/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+ 
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
 </head>
 <body>
-	<h1>个人小站</h1>
-	<h3>September小站测试中！！！！！</h3>
-	
-	<p>Hello 大家好</p >
 
-	<p>你好，这是我的测试网页。 </p >
+<div class="header">
+  <h1>待开发</h1>
+  <p>响应式布局，来源于<a class="cainiao" href="https://www.runoob.com/try/try.php?filename=trycss_website_layout_blog">菜鸟教程</a></p>
+</div>
 
-	<p>很高兴你来到这里, 你可以在以下的联系方式找到我</p >
-	<a href="https://qm.qq.com/cgi-bin/qm/qr?k=sWHV58-GKGiUPCpwsu528wNavjJfjXHO&noverify=0
-">QQ732333804</a>
-	 <marquee behavior="" direction="" scrollamount="15"><font color="pink" face="宋体">September小站</font></marquee>
+<div class="topnav">
+  <a href="#">待开发</a>
+  <a href="#">待开发</a>
+  <a href="#">待开发</a>
+  <a href="#" style="float:right">待开发</a>
+</div>
 
-          <!-- scroll循环滚动        left向左滚动 -->
-    <marquee behavior="scroll" direction="left" scrollamount="12"><font color="red ">September小站</font></marquee>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>文章标题</h2>
+      <h5>2019 年 4 月 17日</h5>
+      <div class="fakeimg" style="height:200px;">图片</div>
+      <p>一些文本...</p>
+      <p>待开发。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。</p>
+    </div>
+    <div class="card">
+      <h2>文章标题</h2>
+      <h5>2019 年 4 月 17日</h5>
+      <div class="fakeimg" style="height:200px;">图片</div>
+      <p>一些文本...</p>
+      <p>待开发。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>关于我</h2>
+      <div class="fakeimg" style="height:100px;">图片</div>
+      <p>关于我的一些信息..</p>
+    </div>
+    <div class="card">
+      <h3>热门文章</h3>
+      <div class="fakeimg"><p>图片</p></div>
+      <div class="fakeimg"><p>图片</p></div>
+      <div class="fakeimg"><p>图片</p></div>
+    </div>
+    <div class="card">
+      <h3>关注我</h3>
+      <p>一些文本...</p>
+    </div>
+  </div>
+</div>
 
-    <marquee behavior="scroll" direction="left" scrollamount="9"><font color="yellow">September小站</font></marquee>
+<div class="footer">
+  <h2>底部区域</h2>
+</div>
 
-    <marquee behavior="scroll" direction="left" scrollamount="6"><font color="red">September小站</font></marquee>
-
-    <marquee behavior="scroll" direction="left" scrollamount="3"><font color="blue">September小站</font></marquee>
-    <marquee behavior="scroll" direction="left" scrollamount="30" scrolldelay="200"><font color="blue">September小站</font></marquee>
-                                                        <!-- scrolldelay滚动延迟 -->
-    <marquee behavior="scroll" direction="up" scrollamount="10"><font color="white">September小站</font></marquee>
-                                     <!-- up向上滚动  down向下   -->
-    <marquee behavior="slide" direction="down" scrollamount="10"><font color="white">September小站</font></marquee>
-              <!-- slide只滚动一次  alternate来回交替滚动   right向右滚动 -->
-     <marquee behavior="alternate" direction="right" scrollamount="10"><font color="white">September小站</font></marquee>
 </body>
 </html>
